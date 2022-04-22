@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from "@auth0/nextjs-auth0"
+import { getAccessToken, withPageAuthRequired } from "@auth0/nextjs-auth0"
 import Head from "next/head";
 import { CalendarIcon } from "@heroicons/react/solid";
 import { Header } from "../../components/Header";
