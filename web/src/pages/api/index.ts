@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   console.log(accessToken)
 
   return httpProxyMiddleware(req, res, {
-    target: 'http://localhost:3332/graphql',
+    target: 'https://ignite-lab-gateway.herokuapp.com/graphql',
     headers: {
       'Authorization': `Bearer ${accessToken}`
     }

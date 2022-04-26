@@ -11,7 +11,15 @@ export class KafkaService
     super({
       client: {
         clientId: 'purchases',
-        brokers: [configService.get('KAFKA_BROKERS')],
+        brokers: configService.get('CLOUDKARAFKA_BROKERS').split(','),
+        // authenticationTimeout: 1000,
+        // reauthenticationThreshold: 10000,
+        ssl: true,
+        sasl: {
+          mechanism: 'scram-sha-256', // scram-sha-256 or scram-sha-512
+          username: configService.get('CLOUDKARAFKA_USERNAME'),
+          password: configService.get('CLOUDKARAFKA_PASSWORD'),
+        },
       },
     });
   }

@@ -18,7 +18,7 @@ export function getApolloClient(
   ssrCache?: NormalizedCacheObject
 ) {
   const httpLink = createHttpLink({
-    uri: 'http://localhost:3332/graphql',
+    uri: 'https://ignite-lab-gateway.herokuapp.com/graphql',
     fetch,
   })
   

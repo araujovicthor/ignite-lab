@@ -1,6 +1,6 @@
 overwrite: true
 
-schema: 'http://localhost:3332/graphql'
+schema: 'https://ignite-lab-gateway.herokuapp.com/graphql'
 
 
 

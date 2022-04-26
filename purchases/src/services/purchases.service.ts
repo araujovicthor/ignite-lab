@@ -53,7 +53,7 @@ export class PurchasesService {
       where: { id: customerId },
     });
 
-    this.kafka.emit('purchases.new-purchase', {
+    this.kafka.emit('du722dvi-purchases.new-purchase', {
       customer: {
         authUserId: customer.authUserId,
       },
