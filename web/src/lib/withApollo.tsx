@@ -18,7 +18,7 @@ export function getApolloClient(
   ssrCache?: NormalizedCacheObject
 ) {
   const httpLink = createHttpLink({
-    uri: 'http://localhost:3000/api',
+    uri: 'https://dainty-douhua-6ac690.netlify.app/api',
     fetch,
   })
   
